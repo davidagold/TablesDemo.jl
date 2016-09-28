@@ -12,9 +12,6 @@ index(tbl)[(fields(tbl)[i]] == i
 """
 AbstractTables.fields(tbl::Table) = tbl.fields
 
-"""
-Returns the `eltype`s of the columns of an AbstractTable.
-"""
 AbstractTables.eltypes(tbl::Table) = map(eltype, columns(tbl))
 AbstractTables.eltypes(tbl::Table, fields::Symbol...) =
     map(eltype, [ tbl[field] for field in fields ])
