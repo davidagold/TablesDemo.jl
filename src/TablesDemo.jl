@@ -1,4 +1,4 @@
-module Tables
+module TablesDemo
 
 using Reexport
 using Compat
@@ -21,4 +21,4 @@ include("table/io.jl")
 # query
 include("query/interface.jl")
 
-end # module Tables
+end # module TablesDemo

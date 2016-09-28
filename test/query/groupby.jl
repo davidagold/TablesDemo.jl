@@ -1,5 +1,5 @@
 module TestGroupBy
-    using Tables
+    using TablesDemo
     using Base.Test
 
     tbl = Table(

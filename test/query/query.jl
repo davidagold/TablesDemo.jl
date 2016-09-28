@@ -1,5 +1,5 @@
 module TestQuery
-    using Tables
+    using TablesDemo
     using Base.Test
 
     a = [1, 2, 3]
