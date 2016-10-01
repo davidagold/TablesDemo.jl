@@ -6,11 +6,11 @@
 
 [![codecov.io](http://codecov.io/github/davidagold/TablesDemo.jl/coverage.svg?branch=master)](http://codecov.io/github/davidagold/TablesDemo.jl?branch=master)
 
-This package demonstrates a minimalist tabular data type, `Table`, in Julia. As in [AbstractTables.jl](https://github.com/davidagold/AbstractTables.jl), our objective is to encourage modularity and extensibility in the development tabular data facilities. To this end, the present package itself provides as few user-facing components as possible; rather, the `Table` API is primarily designed to satisfy other tabular data interfaces that provide familiar functionality such as IO, manipulation, modeling, and visualization. In particular, this package demonstrates how a tabular data type such as `Table` can take advantage of the [jplyr](https://github.com/davidagold/jplyr.jl) query framework as extended by AbstractTables.
+This package demonstrates a minimalist tabular data type, `Table`, in Julia. As in [AbstractTables.jl](https://github.com/davidagold/AbstractTables.jl), our objective is to encourage modularity and extensibility in the development tabular data facilities. To this end, the present package itself provides as few user-facing components as possible; rather, the `Table` API is primarily designed to satisfy other tabular data interfaces that provide familiar functionality such as IO, manipulation, modeling, and visualization. In particular, this package demonstrates how a tabular data type such as `Table` can take advantage of the [StructuredQueries](https://github.com/davidagold/StructuredQueries.jl) query framework as extended by AbstractTables.
 
 ### Interfaces
 
-The `Table` data type satisfies each of the [three AbstractTable interfaces](https://github.com/davidagold/AbstractTables.jl#interfaces). As such, it inherits all of the provided methods of these interfaces -- in particular those of the jplyr-provided querying framework:
+The `Table` data type satisfies each of the [three AbstractTable interfaces](https://github.com/davidagold/AbstractTables.jl#interfaces). As such, it inherits all of the provided methods of these interfaces -- in particular those of the StructuredQueries-provided querying framework:
 ```julia
 julia> using TablesDemo
 
@@ -35,7 +35,7 @@ A Query.
 
 
 julia> typeof(ans)
-jplyr.Query{TablesDemo.Table}
+StructuredQueries.Query{TablesDemo.Table}
 
 julia> collect(qry)
 TablesDemo.Table
